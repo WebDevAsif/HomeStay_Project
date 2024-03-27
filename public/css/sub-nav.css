@@ -1,0 +1,33 @@
+#filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 10px;
+  border-bottom: 0.5px solid #ccc;
+  /* overflow-y: scroll; */
+}
+.filter {
+  opacity: 0.8;
+}
+.filter:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.filter i {
+  font-size: 1.2rem;
+}
+.filter p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.taxes-toggle {
+  display: none;
+}
+.tax-div {
+  border: 1px solid gray;
+  padding: 10px 20px !important;
+  border-radius: 10px;
+}

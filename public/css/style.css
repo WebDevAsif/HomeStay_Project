@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  a {
+    text-decoration: none;
+    color: #222222;
+  }
+}
+
+.containers {
+  padding: 0 80px;
+  flex: 1;
+}
+
+/* Remove spinner arrows from number input */
+.form-control::-webkit-inner-spin-button,
+.form-control::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  /* background-color: #f7f7f7; */
+  background-color: #b0b0b0;
+  padding: 30px 0;
+}
+
+.f-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.f-socials i {
+  font-size: 1.2rem;
+}
+
+/* Card */
+.top-btm-padding {
+  padding: 40px 0;
+}
+
+.listing-card {
+  outline: none !important;
+  border: none !important;
+}
+
+/* cardImage */
+.card-img-top {
+  border-radius: 1rem !important;
+  height: 300px !important;
+}
+
+.card-img-overlay {
+  background-color: white;
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+}
+
+/* New Page  */
+.btns {
+  background-color: #fe424d !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* INPUT FORM BORDER */
+.form-control {
+  border-color: #222222 !important;
+}
+
+/* Show Page  */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.buttons .btn {
+  padding: 5px 40px !important;
+}
+
+.card .card-body {
+  padding-left: 0 !important;
+}
+
+/* Homepage */
+.homePageAnchor {
+  margin-left: 100px;
+  margin-top: 30px;
+  font-size: 20px;
+}

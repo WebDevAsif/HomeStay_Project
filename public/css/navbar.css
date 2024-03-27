@@ -1,0 +1,30 @@
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  height: 5rem;
+  padding: 0 70px !important;
+}
+
+.navbar-nav {
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #222222 !important;
+  font-weight: 500 !important;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.search-inp {
+  border-radius: 25px !important;
+}
+.search-btn {
+  background-color: #fe424d !important;
+  color: #fff !important;
+  border-radius: 25px !important;
+  border: none !important;
+}
