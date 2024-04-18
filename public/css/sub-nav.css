@@ -1,33 +1,46 @@
-#filters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  text-align: center;
-  margin: 1rem 0;
-  padding: 10px;
-  border-bottom: 0.5px solid #ccc;
-  /* overflow-y: scroll; */
+/* sub-nav.css */
+
+#sub-nav {
+  background-color: rgb(250, 250, 250);
 }
+
+/* General Styles */
+.form-switch {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px !important;
+}
+
+.form-switch input {
+  margin-left: 1rem !important;
+  margin-right: 0 !important;
+}
+
 .filter {
+  flex: 0 0 auto;
+  padding: 5px 0;
   opacity: 0.8;
 }
+
 .filter:hover {
   opacity: 1;
   cursor: pointer;
 }
-.filter i {
-  font-size: 1.2rem;
-}
+
 .filter p {
   font-size: 0.8rem;
   font-weight: 600;
+  margin: 0;
 }
-.taxes-toggle {
-  display: none;
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  height: 3px;
+  cursor: pointer;
 }
-.tax-div {
-  border: 1px solid gray;
-  padding: 10px 20px !important;
-  border-radius: 10px;
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  height: 5px;
 }

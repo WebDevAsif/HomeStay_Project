@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="/css/edit.css" />
+
 <% layout ("layouts/boilerplate.ejs") %>
 
-<div class="row top-btm-padding">
-  <div class="col-7 offset-3">
-    <h3>Listing Id : <%= listing._id %></h3>
+<div class="edit-page row py-3 px-3">
+  <div class="col-sm-10 offset-sm-1 offset-lg-3 col-md-10 col-lg-6">
+    <h3 class="fs-5">Listing Id : <%= listing._id %></h3>
     <form
       action="/listings/<%= listing._id %>?_method=PUT"
       method="post"
@@ -75,7 +77,7 @@
         />
       </div>
 
-      <button class="btn btns">Update</button>
+      <button class="btn btn-dark">Update</button>
     </form>
   </div>
 </div>

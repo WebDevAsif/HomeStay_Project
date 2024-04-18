@@ -10,6 +10,9 @@ const upload = multer({ storage });
 //New Route
 router.get("/new", isLoggedIn, allListingController.newFormRenderRoute);
 
+//Filter Route
+router.get("/filter/:id", wrapAsync(allListingController.filter));
+
 router
   .route("/:id")
   .get(wrapAsync(allListingController.showListingRoute))

@@ -1,0 +1,16 @@
+.new-page {
+  margin-top: 90px !important;
+}
+
+/* INPUT FORM BORDER */
+.form-control,
+.category {
+  border-color: #222222 !important;
+}
+
+/* Remove spinner arrows from number input */
+.form-control::-webkit-inner-spin-button,
+.form-control::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,7 +1,20 @@
-<!-- Success Flash -->
+<!-- ---------------Style--------------- -->
+
+<style>
+  .flash-message {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+  }
+</style>
+
+<!-- ---------------Success Flash--------------- -->
 <% if(success && success.length) { %>
 <div
-  class="alert col-6 offset-3 mt-3 alert-success alert-dismissible fade show"
+  class="alert col-6 offset-3 mt-3 alert-success alert-dismissible fade show flash-message"
   role="alert"
 >
   <%= success %>
@@ -14,10 +27,10 @@
 </div>
 <% } %>
 
-<!-- Error Flash -->
+<!-- ---------------Error Flash--------------- -->
 <% if(error && error.length) { %>
 <div
-  class="alert col-6 offset-3 mt-3 alert-danger alert-dismissible fade show"
+  class="alert col-6 offset-3 mt-3 alert-danger alert-dismissible fade show flash-message"
   role="alert"
 >
   <%= error %>
@@ -29,3 +42,20 @@
   ></button>
 </div>
 <% } %>
+
+<!-- ---------------Script--------------- -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let flashMsg = document.querySelector(".flash-message");
+
+    if (flashMsg) {
+      setTimeout(() => {
+        flashMsg.style.opacity = "0"; // Start fading out
+        setTimeout(() => {
+          flashMsg.remove();
+        }, 500);
+      }, 3000);
+    }
+  });
+</script>

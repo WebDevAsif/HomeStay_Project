@@ -11,6 +11,11 @@ module.exports.listingSchema = Joi.object({
     price: Joi.number().required().min(0),
     location: Joi.string().required(),
     country: Joi.string().required(),
+    goemetry: Joi.object({
+      type: Joi.string(),
+      coordinates: Joi.string(),
+    }).required(),
+    category: Joi.string(),
   }).required(),
 });
 

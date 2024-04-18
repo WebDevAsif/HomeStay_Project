@@ -9,6 +9,19 @@ module.exports.indexRenderRoute = async (req, res) => {
   res.render("listings/index.ejs", { allListings, title: "HomeStay" });
 };
 
+module.exports.filter = async (req, res, next) => {
+  let { id } = req.params;
+  let allListings = await Listing.find({ category: { $all: [id] } });
+  console.log(allListings);
+  if (allListings.length > 0) {
+    res.locals.success = `Listing/s Find by ${id}.`;
+    res.render("listings/index.ejs", { allListings, title: "HomeStay" });
+  } else {
+    req.flash("error", "Listing/s not found!");
+    res.redirect("/listings");
+  }
+};
+
 module.exports.newFormRenderRoute = (req, res) => {
   res.render("listings/new.ejs", { title: "New Listing" });
 };
@@ -39,6 +52,7 @@ module.exports.createListingRoute = async (req, res, next) => {
   newListing.owner = req.user;
   newListing.image = { url, filename };
   newListing.geometry = response.body.features[0].geometry;
+  console.log(newListing);
   await newListing.save();
   req.flash("success", "New listing added!");
   res.redirect("/listings");

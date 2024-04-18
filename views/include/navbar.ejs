@@ -1,47 +1,54 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<!-- Navbar Start -->
+<link rel="stylesheet" href="/css/navbar.css" />
+
+<nav
+  class="navbar shadow navbar-expand-lg bg-body-light border-bottom fixed-top px-md-5 px-sm-3"
+>
   <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <a class="navbar-brand" href="/listings">
+      <img src="/favicon/logo.png" alt="logo" class="d-inline-block align-text-center" />
+      Explore
+    </a>
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav me-auto">
-        <a class="nav-link" href="/listings">Explore</a>
-      </div>
-      <form class="d-flex ms-auto" role="search">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="navbar-form d-flex m-auto" role="search">
         <input
-          class="form-control me-2 search-inp"
+          class="form-control me-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success search-btn" type="submit">
+        <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <div class="navbar-nav ms-auto">
-        <% if(!currUser) {%>
+
+      <div class="navbar-user navbar-nav">
+        <% if(!currUser) { %>
         <a class="nav-link" href="/signup"
           ><b>Signup <i class="fa-solid fa-user-plus"></i></b
         ></a>
         <a class="nav-link" href="/login"
           ><b>Login <i class="fa-solid fa-user"></i></b
         ></a>
-        <%} %> <% if(currUser) {%>
+        <% } %> <% if(currUser) { %>
         <a class="nav-link" href="/listings/new"
           >HomeStay your home <i class="fa-solid fa-globe"></i
         ></a>
         <a class="nav-link" href="/logout"><b>Logout</b></a>
-        <%} %>
+        <% } %>
       </div>
     </div>
   </div>
 </nav>
+<!-- Navbar End -->

@@ -1,30 +1,53 @@
-/* Navbar */
+/* navbar.css */
+
 .navbar {
   background-color: #fff;
-  height: 5rem;
-  padding: 0 70px !important;
 }
 
-.navbar-nav {
-  background-color: #fff;
+.navbar .navbar-brand img {
+  width: 100px;
 }
 
-.nav-link {
-  color: #222222 !important;
-  font-weight: 500 !important;
-}
-
-.fa-compass {
-  color: #fe424d;
-  font-size: 2rem;
-}
-
-.search-inp {
+.navbar .navbar-form input {
   border-radius: 25px !important;
 }
-.search-btn {
-  background-color: #fe424d !important;
+
+.navbar .navbar-form button {
+  background-color: rgb(65, 65, 122) !important;
   color: #fff !important;
   border-radius: 25px !important;
   border: none !important;
+}
+
+.navbar .form-control {
+  width: 100% !important;
+  border: 1px solid black !important;
+}
+
+/* Common styles for Extra Small, Small, and Medium Devices */
+.navbar .collapse {
+  background-color: #fff;
+  padding: 25px;
+  position: absolute;
+  width: 100%;
+  top: 89px;
+  left: 0;
+}
+
+.navbar .navbar-form {
+  padding-bottom: 15px;
+}
+
+/* Large and Extra Large Devices */
+@media (min-width: 992px) {
+  .navbar .collapse {
+    padding: 0;
+    position: inherit;
+  }
+  .navbar .form-control {
+    width: 25vw !important;
+  }
+  .navbar .navbar-form {
+    padding-bottom: 0;
+  }
 }

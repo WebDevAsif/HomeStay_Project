@@ -1,19 +1,36 @@
-<% layout ("layouts/boilerplate.ejs") %> <%- include("../include/sub-nav.ejs") %>
-<div class="row mt-5 mb-5 row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
-  <% for(let listing of allListings) {%>
-  <a href="/listings/<%= listing._id %>" class="cardAnchor">
-    <div class="card listing-card px-0.5 mb-3">
-      <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" />
-      <div class="card-img-overlay"></div>
-      <div class="card-body">
-        <p class="card-text"><%= listing.location%></p>
-        <p class="card-title"><b><%= listing.title %></b></p>
-        <p class="card-text">
-          <b>&#8377; <%= listing.price.toLocaleString("en-IN") %> /</b> night
-          <i class="taxes-toggle">+18% GST.</i>
-        </p>
-      </div>
+<link rel="stylesheet" href="/css/index.css" />
+<!-- -------------------------------------------------- -->
+<% layout ("layouts/boilerplate.ejs") %>
+
+<div class="index-page">
+  <!-- -------------------------------------------------- -->
+  <%- include("../include/sub-nav.ejs") %>
+  <!-- -------------------------------------------------- -->
+  <div
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 py-5 px-md-2 px-lg-5"
+  >
+    <% for(let listing of allListings) {%>
+    <div class="listing-main shadow-lg rounded col col-sm-8 px-2">
+      <a href="/listings/<%= listing._id %>" class="cardAnchor">
+        <div class="listing my-3">
+          <img src="<%= listing.image.url %>" class="img-fluid" alt="listing-image" />
+          <div class="listing-details">
+            <div class="locationContainer">
+              <p class="location py-2"><%= listing.location%></p>
+            </div>
+            <div class="titleContainer">
+              <p class="title pb-1"><%= listing.title %></p>
+            </div>
+            <div class="priceContainer">
+              <p class="price pb-2">
+                <b>&#8377; <%= listing.price.toLocaleString("en-IN") %> /</b> night
+                <i class="taxes-toggle">+18% GST.</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
-  </a>
-  <% } %>
+    <% } %>
+  </div>
 </div>

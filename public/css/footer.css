@@ -1,0 +1,27 @@
+.footer {
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  i {
+    font-size: 1rem;
+  }
+}
+.footer .languages {
+  outline: 2px solid black !important;
+  border-radius: 14px;
+}
+
+.footer select {
+  background: transparent !important;
+  border: none;
+  outline: none;
+}
+
+.footer .left-side a {
+  line-height: 2rem;
+}

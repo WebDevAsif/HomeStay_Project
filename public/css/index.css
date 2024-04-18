@@ -1,0 +1,44 @@
+.index-page {
+  margin-top: 90px;
+  a {
+    text-decoration: none;
+    color: #222222;
+  }
+  p {
+    margin: 0 !important;
+  }
+}
+
+.img-fluid {
+  border-radius: 0.8rem !important;
+  height: 300px !important;
+  width: 400px !important;
+}
+
+.index-page .title {
+  font-weight: 600;
+}
+
+.card-img-overlay {
+  background-color: white;
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+}
+
+.listing-card {
+  outline: none !important;
+  border: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .index-page > div,
+  .listing-main {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 10px;
+  }
+}
