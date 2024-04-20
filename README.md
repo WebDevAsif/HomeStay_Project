@@ -48,7 +48,7 @@ Md Asif
 
 Email: asifbinsabir611@gmail.com
 
-LinkedIn: [Amna's LinkedIn Profile](https://www.linkedin.com/in/asif-developer/)
+LinkedIn: [Asif's LinkedIn Profile](https://www.linkedin.com/in/asif-developer/)
 
 ## Website Link
 
