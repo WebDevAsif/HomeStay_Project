@@ -44,12 +44,12 @@ HomeStay is a web application that enables users to discover and book homestays 
 
 ## Author
 
-Amna
+Md Asif
 
-Email: amna@gmail.com
+Email: asifbinsabir611@gmail.com
 
-LinkedIn: [Amna's LinkedIn Profile](https://www.linkedin.com/in/amna/)
+LinkedIn: [Amna's LinkedIn Profile](https://www.linkedin.com/in/asif-developer/)
 
 ## Website Link
 
-[HomeStay Website](https://homestay.onrender.com/)
+[HomeStay Website](https://homestay-project.onrender.com/)
