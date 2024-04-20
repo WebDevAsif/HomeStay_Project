@@ -22,6 +22,20 @@ module.exports.filter = async (req, res, next) => {
   }
 };
 
+module.exports.search = async (req, res, next) => {
+  let { q } = req.query;
+  let regex = new RegExp(q, "i");
+  console.log("Regex:", regex);
+  let allListings = await Listing.find({ title: regex });
+  if (allListings.length > 0) {
+    res.locals.success = `Listing/s Find by ${q}.`;
+    res.render("listings/index.ejs", { allListings, title: "HomeStay" });
+  } else {
+    req.flash("error", "Listing/s not found!");
+    res.redirect("/listings");
+  }
+};
+
 module.exports.newFormRenderRoute = (req, res) => {
   res.render("listings/new.ejs", { title: "New Listing" });
 };

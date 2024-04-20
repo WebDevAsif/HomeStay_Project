@@ -1,11 +1,16 @@
 <!-- ---------------Style--------------- -->
-
 <style>
+  .flash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
   .flash-message {
     position: absolute;
     top: 80px;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     transition: opacity 0.5s ease-in-out;
   }
@@ -13,38 +18,41 @@
 
 <!-- ---------------Success Flash--------------- -->
 <% if(success && success.length) { %>
-<div
-  class="alert col-6 offset-3 mt-3 alert-success alert-dismissible fade show flash-message"
-  role="alert"
->
-  <%= success %>
-  <button
-    type="button"
-    class="btn-close"
-    data-bs-dismiss="alert"
-    aria-label="Close"
-  ></button>
+<div class="flash">
+  <div
+    class="alert col-12 col-sm-10 col-md-8 col-lg-6 mt-3 alert-success alert-dismissible fade show flash-message"
+    role="alert"
+  >
+    <%= success %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
 </div>
 <% } %>
 
 <!-- ---------------Error Flash--------------- -->
 <% if(error && error.length) { %>
-<div
-  class="alert col-6 offset-3 mt-3 alert-danger alert-dismissible fade show flash-message"
-  role="alert"
->
-  <%= error %>
-  <button
-    type="button"
-    class="btn-close"
-    data-bs-dismiss="alert"
-    aria-label="Close"
-  ></button>
+<div class="flash">
+  <div
+    class="alert col-12 col-sm-10 col-md-8 col-lg-6 mt-3 alert-danger alert-dismissible fade show flash-message"
+    role="alert"
+  >
+    <%= error %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
 </div>
 <% } %>
 
 <!-- ---------------Script--------------- -->
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     let flashMsg = document.querySelector(".flash-message");
@@ -55,7 +63,7 @@
         setTimeout(() => {
           flashMsg.remove();
         }, 500);
-      }, 3000);
+      }, 1500);
     }
   });
 </script>

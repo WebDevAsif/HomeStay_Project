@@ -10,7 +10,7 @@
     class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 py-5 px-md-2 px-lg-5"
   >
     <% for(let listing of allListings) {%>
-    <div class="listing-main shadow-lg rounded col col-sm-8 px-2">
+    <div class="listing-main col col-sm-8 px-2">
       <a href="/listings/<%= listing._id %>" class="cardAnchor">
         <div class="listing my-3">
           <img src="<%= listing.image.url %>" class="img-fluid" alt="listing-image" />

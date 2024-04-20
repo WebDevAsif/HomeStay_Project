@@ -42,6 +42,37 @@
         <input type="file" name="listing[image]" id="image" class="form-control" />
       </div>
 
+      <div class="mb-3">
+        <label for="category" class="form-label">Category : </label>
+        <select
+          name="listing[category]"
+          id="category"
+          class="form-select category"
+          required
+        >
+          <option selected>
+            <%= listing.category %>
+            <span id="openToChange">&nbsp; &nbsp;-Open to change</span>
+          </option>
+          <option value="Rooms">Rooms</option>
+          <option value="Beachfront">Beachfront</option>
+          <option value="Trending">Trending</option>
+          <option value="Farm">Farm</option>
+          <option value="Lake">Lake</option>
+          <option value="Historical homes">Historical homes</option>
+          <option value="Mountain">Mountain</option>
+          <option value="Amazing pools">Amazing pools</option>
+          <option value="Amazing views">Amazing views</option>
+          <option value="Design">Design</option>
+          <option value="Surfing">Surfing</option>
+          <option value="National park">National park</option>
+          <option value="Campaign">Campaign</option>
+        </select>
+
+        <div class="valid-feedback">Done</div>
+        <div class="invalid-feedback">Please choose category</div>
+      </div>
+
       <div class="row">
         <div class="mb-3 col-md-4">
           <label for="price" class="form-label">Price : </label>

@@ -44,3 +44,9 @@
   background: #888;
   height: 5px;
 }
+
+@media (max-width: 991.99px) {
+  .tax-area {
+    padding-top: 15px;
+  }
+}

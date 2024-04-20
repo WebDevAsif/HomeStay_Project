@@ -8,6 +8,11 @@
   width: 100px;
 }
 
+.navbar .navbar-form {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
 .navbar .navbar-form input {
   border-radius: 25px !important;
 }
@@ -24,30 +29,8 @@
   border: 1px solid black !important;
 }
 
-/* Common styles for Extra Small, Small, and Medium Devices */
-.navbar .collapse {
-  background-color: #fff;
-  padding: 25px;
-  position: absolute;
-  width: 100%;
-  top: 89px;
-  left: 0;
-}
-
-.navbar .navbar-form {
-  padding-bottom: 15px;
-}
-
-/* Large and Extra Large Devices */
 @media (min-width: 992px) {
-  .navbar .collapse {
-    padding: 0;
-    position: inherit;
-  }
-  .navbar .form-control {
+  .navbar-form {
     width: 25vw !important;
-  }
-  .navbar .navbar-form {
-    padding-bottom: 0;
   }
 }

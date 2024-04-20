@@ -13,6 +13,8 @@ router.get("/new", isLoggedIn, allListingController.newFormRenderRoute);
 //Filter Route
 router.get("/filter/:id", wrapAsync(allListingController.filter));
 
+router.get("/search?:q", wrapAsync(allListingController.search));
+
 router
   .route("/:id")
   .get(wrapAsync(allListingController.showListingRoute))

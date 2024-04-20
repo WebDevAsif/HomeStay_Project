@@ -17,12 +17,15 @@ const listingSchema = new Schema({
   },
   price: {
     type: Number,
+    required: true,
   },
   location: {
     type: String,
+    required: true,
   },
   country: {
     type: String,
+    required: true,
   },
   reviews: [
     {
@@ -57,7 +60,10 @@ const listingSchema = new Schema({
       "Lake",
       "Historical homes",
       "Amazing views",
-      "New",
+      "Design",
+      "Surfing",
+      "National park",
+      "Campaign",
     ],
   },
 });
