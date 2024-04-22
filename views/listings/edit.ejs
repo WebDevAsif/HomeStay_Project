@@ -50,11 +50,7 @@
           class="form-select category"
           required
         >
-          <option selected>
-            <%= listing.category %>
-            <span id="openToChange">&nbsp; &nbsp;-Open to change</span>
-          </option>
-          <option value="Rooms">Rooms</option>
+          <option value="<%= listing.category %>"><%= listing.category %></option>
           <option value="Beachfront">Beachfront</option>
           <option value="Trending">Trending</option>
           <option value="Farm">Farm</option>

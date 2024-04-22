@@ -1,11 +1,14 @@
-const taxesSwitch = document.getElementById("flexSwitchCheckDefault");
-const taxesToggle = document.getElementsByClassName("taxes-toggle");
-taxesSwitch.addEventListener("click", () => {
-  for (let info of taxesToggle) {
-    if (info.style.display != "inline") {
-      info.style.display = "inline";
-    } else {
-      info.style.display = "none";
-    }
-  }
-});
+// document.getElementById("flexSwitchCheckDefault").addEventListener("change", function () {
+//   let priceElements = document.querySelectorAll(".price b");
+//   priceElements.forEach((price) => {
+//     let currentPrice = parseFloat(price.innerText.replace("₹", "").replace(",", ""));
+//     let gst = (currentPrice * 18) / 100;
+//     let newPrice = currentPrice + gst;
+
+//     if (this.checked) {
+//       price.innerText = "₹" + newPrice.toLocaleString("en-IN") + " / night";
+//     } else {
+//       price.innerText = "₹" + currentPrice.toLocaleString("en-IN") + " / night";
+//     }
+//   });
+// });

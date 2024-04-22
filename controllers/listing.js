@@ -25,7 +25,6 @@ module.exports.filter = async (req, res, next) => {
 module.exports.search = async (req, res, next) => {
   let { q } = req.query;
   let regex = new RegExp(q, "i");
-  console.log("Regex:", regex);
   let allListings = await Listing.find({ title: regex });
   if (allListings.length > 0) {
     res.locals.success = `Listing/s Find by ${q}.`;
@@ -87,10 +86,19 @@ module.exports.editFormRenderRoute = async (req, res) => {
 };
 
 module.exports.updateListingRoute = async (req, res) => {
+  let response = await geocodingClient
+    .forwardGeocode({
+      query: req.body.listing.location,
+      limit: 1,
+    })
+    .send();
+
+  let geometry = response.body.features[0].geometry;
+
   let { id } = req.params;
   const listing = await Listing.findByIdAndUpdate(
     id,
-    { ...req.body.listing },
+    { ...req.body.listing, geometry },
     { new: true }
   );
 
